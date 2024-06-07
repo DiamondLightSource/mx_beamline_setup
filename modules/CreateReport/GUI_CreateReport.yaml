@@ -1,0 +1,13 @@
+WP1_Label_1_Title: "RemoteAccess_WZ"
+WP1_Label_1_Text: |
+  Beamline setup is complete. If would like to post
+  the QC report to elog please click NEXT.
+
+WP2_Label_1_Title: "RemoteAccess_WZ"
+WP2_Label_1_Text: |
+  Congratulations your beamline setup report is now
+  available on elog! 
+
+  Press FINISHED and then please close the QC GUI. 
+
+display_configuration: "/dls_sw/{BEAMLINE}/software/gda_versions/var/display.configuration"

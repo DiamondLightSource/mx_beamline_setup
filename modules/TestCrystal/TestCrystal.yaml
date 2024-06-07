@@ -1,0 +1,23 @@
+WP1_Label_1_Title: "TestCrystal_WZ"
+WP1_Label_1_Text: |
+  TEST CRYSTAL STATISTICS QC GATHERING
+
+  * IMPORTANT: This procedure will not collect test crystal dataset, only collect QC data. 
+
+  * 1. Mount the test crystal from the samples tab in GDA. And run collection using the pre-populated parameters.
+
+  * 2. Check that processing pipelines work and statistics are the following.
+        - Rmeas low resolution <= 3.5 % (<= 3.0 % is best)
+        - ISA > 25 (> 30 is best) 
+        * IMPORTANT: If Rmeas low resolution > 3.5% and ISA <=25 crystal is bad or beamline is not right. 
+        Might be worth testing another crystal and reporting on the Observation field under the robot load table. 
+
+  * 3. After FastDP is FINISHED, click *NEXT* and select masterfile for test crystal to gather statistics.
+
+WP2_Label_1_Title: "TestCrystal_WZ"
+WP2_Label_1_Text: |
+  * Data collected and stored for QC
+
+  Thank you, you may press finish now. 
+
+display_configuration: "/dls_sw/{BEAMLINE}/software/gda_versions/var/display.configuration"

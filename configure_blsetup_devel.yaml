@@ -1,0 +1,118 @@
+modules:
+  CreateDirectories:
+    widget2update: CB
+    criteria2expire:
+      - 18
+      - hour
+    needs_folder_to_write: No
+  InitialChecks:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: No
+  BeamlineMessages:
+    widget2update: CB
+    criteria2expire:
+      - 4
+      - hour
+    needs_folder_to_write: No
+  AlignBeam:
+    widget2update: DE
+    criteria2expire:
+      - 8
+      - hour
+    needs_folder_to_write: Yes
+  RotationAxis:
+    widget2update: DE
+    criteria2expire:
+      - 8
+      - hour
+    needs_folder_to_write: Yes
+  Snapshot:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - day
+    needs_folder_to_write: Yes
+  CryoJet:
+    widget2update: DE
+    criteria2expire:
+      - 15
+      - day
+    needs_folder_to_write: No
+  TestStream:
+    widget2update: DE
+    criteria2expire:
+      - 15
+      - day
+    needs_folder_to_write: No
+  BeamCentre:
+    widget2update: DE
+    criteria2expire:
+      - 7
+      - day
+    needs_folder_to_write: Yes
+  TestCrystal:
+    widget2update: DE
+    criteria2expire:
+      - 1
+      - day
+    needs_folder_to_write: Yes
+  RobotSamples:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: No
+  RemoteAccess:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: No
+  CreateReport:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: Yes
+  EmailReady:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: Yes
+  Comment:
+    widget2update: UNK
+    needs_folder_to_write: Yes
+    criteria2expire:
+      - 0
+      - second
+  Close:
+    widget2update: CLOSE
+    needs_folder_to_write: No
+    criteria2expire:
+      - 0
+      - second
+redis_hash:
+  expiry: 576000
+  key: '{BEAMLINE}:BeamlineSetup:hash'
+logging:
+  formatters:
+    f:
+      format: '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+  handlers:
+    h:
+      class: logging.StreamHandler
+      formatter: f
+      level: 10
+  root:
+    handlers:
+    - h
+    #logging.DEBUG = 10, logging.INFO = 20, logging.WARN - 30, others you need to find out
+    level: 10
+  version: 1
+
+
+

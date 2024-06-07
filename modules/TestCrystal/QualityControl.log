@@ -1,0 +1,24 @@
+2024-04-09 16:15:29,380 [INFO] in parse_fastdp in QualityControl.py at line 136: 
+[DEBUG]: Running FAST_DP analysis on /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3
+2024-04-09 16:15:29,381 [INFO] in parse_fastdp in QualityControl.py at line 137: [DEBUG]: opening /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP
+2024-04-09 16:15:29,384 [INFO] in parse_fastdp in QualityControl.py at line 143: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP log exists
+2024-04-09 16:15:29,388 [INFO] in parse_fastdp in QualityControl.py at line 164: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/fast_dp.log log exists
+2024-04-09 16:15:29,389 [INFO] in parse_fastdp in QualityControl.py at line 192: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/aimless.log log exists
+2024-04-09 16:16:09,968 [INFO] in parse_fastdp in QualityControl.py at line 136: 
+[DEBUG]: Running FAST_DP analysis on /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3
+2024-04-09 16:16:09,968 [INFO] in parse_fastdp in QualityControl.py at line 137: [DEBUG]: opening /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP
+2024-04-09 16:16:09,968 [INFO] in parse_fastdp in QualityControl.py at line 143: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP log exists
+2024-04-09 16:16:09,969 [INFO] in parse_fastdp in QualityControl.py at line 164: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/fast_dp.log log exists
+2024-04-09 16:16:09,969 [INFO] in parse_fastdp in QualityControl.py at line 192: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/aimless.log log exists
+2024-04-09 16:20:46,820 [INFO] in parse_fastdp in QualityControl.py at line 136: 
+[DEBUG]: Running FAST_DP analysis on /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3
+2024-04-09 16:20:46,820 [INFO] in parse_fastdp in QualityControl.py at line 137: [DEBUG]: opening /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP
+2024-04-09 16:20:46,823 [INFO] in parse_fastdp in QualityControl.py at line 143: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP log exists
+2024-04-09 16:20:46,825 [INFO] in parse_fastdp in QualityControl.py at line 164: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/fast_dp.log log exists
+2024-04-09 16:20:46,826 [INFO] in parse_fastdp in QualityControl.py at line 192: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/aimless.log log exists
+2024-04-09 16:32:48,539 [INFO] in parse_fastdp in QualityControl.py at line 136: 
+[DEBUG]: Running FAST_DP analysis on /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3
+2024-04-09 16:32:48,540 [INFO] in parse_fastdp in QualityControl.py at line 137: [DEBUG]: opening /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP
+2024-04-09 16:32:48,543 [INFO] in parse_fastdp in QualityControl.py at line 143: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/CORRECT.LP log exists
+2024-04-09 16:32:48,547 [INFO] in parse_fastdp in QualityControl.py at line 164: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/fast_dp.log log exists
+2024-04-09 16:32:48,548 [INFO] in parse_fastdp in QualityControl.py at line 192: [DEBUG]: /dls/i04/data/2024/cm37236-1/processed/20240313/TestProteinaseK/ProtK_13/ProtK_13_3/fast_dp/aimless.log log exists

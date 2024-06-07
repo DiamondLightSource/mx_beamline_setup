@@ -1,0 +1,34 @@
+WP1_Label_1_Title: "RotationAxis_WZ"
+WP1_Label_1_Text: |
+  ROTATION AXIS ALIGNMENT QC GATHERING
+
+  * 1. from robot options, mount the alignment pin.
+  This will automatically align and update the rotation axis at zoom 7.5X. Please check afterwards that it is well aligned.
+
+  *2. The align rotation axis button is available in Tools to use in case the automated recalibration does not work repeatedly
+
+  Full editable instructions in confluence here:
+  https://confluence.diamond.ac.uk/display/MXTech/Beamline+startup+instructions#Beamlinestartupinstructions-Rotationaxischeck
+
+  * IMPORTANT: Ensure tip is at crosshair and only press "Next" if it is SAFE to rotate the goniometer!
+
+WP2_Label_1_Title: "RotationAxis_WZ"
+WP2_Label_1_Text: |
+  * Data collected and stored for QC
+
+  Please unload the alignment pin and press 'FINISH'
+
+PVs:
+  BL04I-MO-GONIO-01:
+    GONP_Y: Y.RBV
+    GONP_X: X.RBV
+    GONP_Z: Z.RBV
+
+  BL04I-MO-SGON-01:
+    STUB_X: X_STUB_OFFSET_RBV
+    STUB_Y: Y_STUB_OFFSET_RBV
+    STUB_Z: Z_STUB_OFFSET_RBV
+    Smargon_home: HOMESTATUS_MSG
+
+display_configuration: "/dls_sw/{BEAMLINE}/software/gda_versions/var/display.configuration"
+zoom_pv: "BL04I-EA-OAV-01:FZOOM:MP:SELECT"

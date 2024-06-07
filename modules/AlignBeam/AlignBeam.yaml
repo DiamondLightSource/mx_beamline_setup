@@ -1,0 +1,64 @@
+WP1_Label_1_Title: "AlignBeam_WZ"
+WP1_Label_1_Text: |
+  *Beamline EPICS Checks*
+
+    1. Check all collimation table real motors are at zero (0.0 mm) position or within few microns. 
+
+    2. Check S4 X and Y slit gaps sizes are set to 0.5mm or larger.
+
+  *BEAM IN CROSSHAIRS QC - at different zoom levels*
+
+    1. go to the Tools Perspective >> Beam Optics tab.
+  
+    2. Move Scintillator in and turn off backlight. Check flux reading at top of GDA main window.
+
+    3. Set transmission to 10% and manually align beam at all zoom levels.
+
+    4. When you are finished, please click 'NEXT'. This will take a series of images for inspecion.   
+  
+  Full editable instructions in confluence:
+  https://confluence.diamond.ac.uk/display/MXTech/Beamline+startup+instructions#Beamlinestartupinstructions-Beamdeliverychecks)
+   
+
+WP2_Label_1_Title: "AlignBeam_WZ"
+WP2_Label_1_Text: |
+
+  * NOTE: if you are not happy with cross hairs you can click 'BACK' to repeat alignment and re-collect images.
+
+  * Once you are happy please move out scintillator and press 'FINISH'. 
+
+PVs:
+  BL04I-EA-ATTN-01:
+    TRANSMISSION: LAST_APPLIED_TRANS
+
+  BL04I-MO-FLUX-01:
+    FLUX: SAMP
+
+  BL04I-EA-FDBK-01:
+    Feedback_enable: FB_ENABLE
+    Feedback_good: XBPM1POSITION_OK
+    Feedback_good: XBPM2POSITION_OK
+
+  SR-DI-I04-01:
+    Machine_X_STEER: "X:ANGLE"
+    Machine_Y_STEER: "Y:ANGLE"
+  
+  BL04I-MO-FSWT-01:
+    PID_XBPM2_X_KP: FDBK1.KP 
+    PID_XBPM2_X_rate: FDBK1.SCAN
+    PID_XBPM2_Y_KP: FDBK2.KP 
+    PID_XBPM2_Y_rate: FDBK2.SCAN
+    BEAM_SIZE_Y: VER
+    BEAM_SIZE_X: HOR
+
+  BL04I-AL-SLITS-04:
+    S4_slits_X: XGAP.RBV
+    S4_slits_Y: YGAP.RBV
+
+  BL04I-MO-DCM-01:
+    DCM_roll: ROLL.RBV
+    DCM_pitch: PITCH.RBV
+    DCMP_temp1: TEMP1
+  
+display_configuration: "/dls_sw/{BEAMLINE}/software/gda_versions/var/display.configuration"
+zoom_pv: "BL04I-EA-OAV-01:FZOOM:MP:SELECT"

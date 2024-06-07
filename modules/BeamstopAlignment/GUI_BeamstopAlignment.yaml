@@ -1,0 +1,21 @@
+WP1_Label_1_Title: "RemoteAccess_WZ"
+WP1_Label_1_Text: |
+  in GDA
+    *1. using the Data Collection Table Input, right click and select+delete all current data collections
+    right click and load from: 
+    
+    /home/i04user/xml/start_up_test_shots_beamstop_Apr2024.xml
+    
+    *2. On each set start with (1%) before running the full beam one (100%). Click on run selected (NOT run all)
+
+    If necessary su as yourself  and adjust the beamstop position in the file: 
+
+    /dls_sw/i04/software/gda/config/scripts/beamlineParameters 
+    
+    Once the file is saved repeat the previous data collection
+
+WP2_Label_1_Title: "RemoteAccess_WZ"
+WP2_Label_1_Text: |
+  Thank you for aligning the beamstop. 
+
+display_configuration: "/dls_sw/{BEAMLINE}/software/gda_versions/var/display.configuration"

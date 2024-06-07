@@ -1,0 +1,92 @@
+modules:
+  CreateDirectories:
+    widget2update: CB
+    criteria2expire:
+      - 18
+      - hour
+    needs_folder_to_write: No
+  InitialChecks:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: No
+  BeamlineMessages:
+    widget2update: CB
+    criteria2expire:
+      - 4
+      - hour
+    needs_folder_to_write: No
+  AlignBeam:
+    widget2update: DE
+    criteria2expire:
+      - 8
+      - hour
+    needs_folder_to_write: Yes
+  RotationAxis:
+    widget2update: DE
+    criteria2expire:
+      - 8
+      - hour
+    needs_folder_to_write: Yes
+  BeamstopAlignment:
+    widget2update: CB
+    criteria2expire:
+      - 1
+      - day
+    needs_folder_to_write: No
+  TestCrystal:
+    widget2update: DE
+    criteria2expire:
+      - 1
+      - day
+    needs_folder_to_write: Yes
+  CreateReport:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: Yes
+  RemoteAccess:
+    widget2update: CB
+    criteria2expire:
+      - 2
+      - hour
+    needs_folder_to_write: No
+  Close:
+    widget2update: CLOSE
+    needs_folder_to_write: No
+    criteria2expire:
+      - 0
+      - second
+redis_hash:
+  expiry: 576000
+  key: '{BEAMLINE}:BeamlineSetup:hash'
+logging:
+  formatters:
+    f:
+      format: '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+  handlers:
+    h:
+      class: logging.StreamHandler
+      formatter: f
+      level: 10
+  root:
+    handlers:
+    - h
+    #logging.DEBUG = 10, logging.INFO = 20, logging.WARN - 30, others you need to find out
+    level: 10
+  version: 1
+nx_machines:
+  i03: # to be confirmed by i03 staff
+    - i03-ws001.diamond.ac.uk
+    - i03-ws002.diamond.ac.uk
+  i04:
+    - i04-ws001.diamond.ac.uk
+    - i04-ws002.diamond.ac.uk
+  i04-1: 
+    - i04-1-ws001.diamond.ac.uk
+    - i04-1-ws002.diamond.ac.uk
+  i24: # to be confirmed by i24 staff
+    - i24-ws001.diamond.ac.uk
+    - i24-ws002.diamond.ac.uk

@@ -1,0 +1,125 @@
+<head>
+<style type="text/css"> 
+body { 
+    width: 100%; /* Set the width of the body to 100% */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+#container {
+    width: 210mm; /* Set the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+#calibration { 
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+    width:100%;
+    border-collapse:collapse; 
+} 
+
+#calibration td, #calibration th { 
+    width: fit-content;
+    font-size:1em; 
+    border:0px solid #8f1b98; 
+    padding:3px 7px 2px 7px; 
+} 
+
+#calibration th { 
+    width: 100%;
+    font-size:1.1em; 
+    text-align:left; 
+    padding-top:5px; 
+    padding-bottom:4px; 
+    background-color:#8f1b98; 
+    color:#ffffff; 
+} 
+</style> 
+</head>
+
+<body>
+<div id="container">
+    <table id="calibration"> 
+    <tr> 
+        <th colspan="8">{{ data["beamline"] }} Calibration Report for experiment </th>
+    </tr> 
+    <tr>
+        <th colspan="8">Set up by {{ data["beamline_scientist"] }} completed on {{ data["date"] }}</th>
+    </tr>
+
+    {% for module in data["modules"] %}
+        <tr>
+            <td><h2>{{ module.split('_')[0] }}</h2></td>
+        </tr>
+
+        {% if "image_url" in data["modules"][module] %}
+            {% if data["modules"][module]["image_url"] is not none %}
+        <tr>
+            <td colspan="8"><p align="center"><img src="{{ data['modules'][module]['image_url']['image'] }}" alt="{{ module }}" width="{{ data['image_width_px'] }}" /></p></td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="8" ><p>no image for {{ module }}, images: {{ data["modules"][module]["images"] }}</p></td>
+        </tr>    
+            {% endif %}        
+        {% endif %}
+
+        
+        {% if data["modules"][module].EPICS %}
+        <tr>
+            <td colspan="8" ><h2>EPICS Parameter Table</h2></td>
+        </tr>
+        <tr>
+            <th colspan="4">Parameter</th>
+            <th colspan="4">Value</th>
+        </tr>
+        {% for key, value in data['modules'][module]['EPICS'].items() %}
+        <tr>
+            <td colspan="4">{{ key }}</td>
+            <td colspan="4">{{ value }}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+
+        {% if module.split("_")[0] == "RemoteAccess" %}
+        <tr>
+            <td colspan="8"><h2>Remote Access NX</h2></td>
+        </tr>
+        <tr> 
+        {% for item in data['modules'][module]['nx_connections'][0] %}
+            <th>{{item}}</th>
+        {% endfor %}
+        </tr>
+        {% for item in data['modules'][module]['nx_connections'][1:] %}
+           <tr>
+           {% for value in item %}
+           <td>{{ value }}</td>
+           {% endfor %}
+           </tr>
+        {% endfor %}
+        {% endif %}
+
+        {% if module.split("_")[0] == "TestCrystal" %}
+        <tr>
+            <td colspan="8"><h2>Test Crystal Statistics</h2></td>
+        </tr>
+        <tr>
+            <th colspan="4">Parameter</th>
+            <th colspan="4">Value</th>
+        </tr>
+        {% for key, value in data['modules'][module].items() %}
+        {% if key not in ["images","image_url"] %}
+        <tr>
+            <td colspan="4">{{ key }}</td>
+            <td colspan="4">{{ value }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        <tr>
+            <td colspan="8"><hr></td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+</body>

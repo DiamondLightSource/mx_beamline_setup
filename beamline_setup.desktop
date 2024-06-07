@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Beamline Setup
+Comment=Quality Control reporting of Beamline Setup
+Exec=/dls/science/groups/mx/Python/applications/beamline_setup/beamline_setup.sh production
+Icon=/dls/science/groups/mx/Python/applications/beamline_setup/img/logo.png
+Terminal=false
+Type=Application
+Categories=Application;Development;
+
